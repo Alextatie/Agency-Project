@@ -1,0 +1,66 @@
+html{
+   height: 100%;
+}
+
+*{
+  font-family: Arial;
+  color: white;
+  border-color: black;
+  text-shadow: 0px 0px 4px black, 0 0 6px black;
+}
+
+body {
+ background-image: url("../Images/bg-1.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ text-align: center;
+}
+
+#header h1{
+  font-size: 72px;
+  line-height: 0px;
+}
+
+
+#header p{
+  font-size: 22px;
+  text-shadow: 2px 2px 3px black, 0 0 5px black;
+}
+
+a{
+  font-size: 24px;
+  text-decoration: none;
+}
+a:hover{
+  text-shadow: 2px 2px 3px white, 0 0 6px black;
+}
+
+#navigation{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px;
+  margin: auto;
+  height: 24px;
+  width: 40%;
+  background: rgba(3, 4, 5, 0.4);
+  border-radius: 12px;
+}
+
+#navigation li{
+  display: block;
+  float: left;
+}
+
+input{
+  height: 26px;
+  width: 200px;
+  color: black;
+  text-shadow: none;
+}
+
+input[type="submit"]{
+  height: 26px;
+  width: 70px;
+  color: black;
+  text-shadow: none;
+}

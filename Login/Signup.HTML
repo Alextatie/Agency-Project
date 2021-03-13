@@ -4,14 +4,22 @@
     <meta charset="utf-8">
     <meta name="description" content="Signup.">
     <title>SCE Tours Signup page.</title>
-    <link rel="stylesheet" type="tet/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
   </head>
   <body>
+    <ul id="navigation">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Deals/Deals.html">Deals</a></li>
+      <li><a href="../About/About.html">About us</a></li>
+      <li><a href="../Contact/Contact.html">Contact us</a></li>
+      <li><a href="Login.html">Login</a></li>
+    </ul>
     <h1>Sign up:</h1>
-    <br><h3>Username:</h3>
-    <br><h3>Password:</h3>
-    <br><h3>Repeat Password:</h3>
-    <br><hr>
-    <a href="../index.html">home page</a>
+    <br><form action="auth" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <br><br><input type="password" name="pswd" placeholder="Password" required>
+        <br><br><input type='email' name='email' placeholder='Email Address' required>
+        <br><br><input type="submit">
+    </form>
   </body>
 </html>
