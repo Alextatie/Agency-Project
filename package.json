@@ -2,14 +2,14 @@
   "name": "agency-project",
   "version": "1.0.0",
   "description": "agency-project",
-  "main": "app.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "dev": "nodemon app.js",
     "test": "mocha test/*.spec.js --color",
-    "lint": "eslint src/*.js --color",
+    "lint": "eslint *.js --color",
     "start": "nodemon app.js"
   },
   "repository": {
