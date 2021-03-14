@@ -1,7 +1,6 @@
 {
   "name": "agency-project",
   "version": "1.0.0",
-  "engines":{"node":"12.11.1"},
   "description": "This is a website made to learn HTML, CSS and javascrpit.",
   "main": "index.js",
   "directories": {
