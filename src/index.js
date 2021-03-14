@@ -3,7 +3,7 @@ const app_port = process.env.PORT || 3000
 const app = express()
 
 app.get('/', function (req, res){
-    res.sendfile("src/Index.html");
+    res.sendfile("/Index.html");
 });
 
 app.listen(app_port)
