@@ -9,7 +9,7 @@
   "scripts": {
     "test": "mocha test/*.spec.js --color",
     "lint": "eslint src/*.js --color",
-    "start": "node src/Index.html"
+    "start": "node Index.html"
   },
   "repository": {
     "type": "git",
