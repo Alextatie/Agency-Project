@@ -1,0 +1,33 @@
+{
+  "name": "agency-project",
+  "version": "1.0.0",
+  "description": "This is a website made to learn HTML, CSS and javascrpit.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/*.spec.js --color",
+    "lint": "eslint src/*.js --color",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alextatie/Agency-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alextatie/Agency-Project/issues"
+  },
+  "homepage": "https://github.com/Alextatie/Agency-Project#readme",
+  "dependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.1",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  }
+}
