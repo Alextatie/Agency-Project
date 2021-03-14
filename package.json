@@ -1,15 +1,16 @@
 {
   "name": "agency-project",
   "version": "1.0.0",
-  "description": "This is a website made to learn HTML, CSS and javascrpit.",
-  "main": "index.js",
+  "description": "agency-project",
+  "main": "src/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "dev": "nodemon src/index.js",
     "test": "mocha test/*.spec.js --color",
     "lint": "eslint src/*.js --color",
-    "start": "node Index.html"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +26,11 @@
     "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.1",
     "chai": "^4.3.4",
+    "express": "^4.17.1",
     "mocha": "^8.3.2"
   },
   "devDependencies": {
-    "eslint": "^7.22.0"
+    "eslint": "^7.22.0",
+    "nodemon": "^2.0.7"
   }
 }
