@@ -1,3 +1,7 @@
 # TestHTML
 
-This is a website made to learn HTML, CSS and javascrpit.
+#This is a travel agency website for a university project.
+#The website is built using HTML,CSS,JS and EJS.
+
+#Link to the websitesite:
+#https://sce-agency-project.herokuapp.com/
