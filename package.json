@@ -2,15 +2,15 @@
   "name": "agency-project",
   "version": "1.0.0",
   "description": "agency-project",
-  "main": "src/index.js",
+  "main": "app.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon app.js",
     "test": "mocha test/*.spec.js --color",
     "lint": "eslint src/*.js --color",
-    "start": "node ./src/index.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.1",
     "chai": "^4.3.4",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mocha": "^8.3.2"
   },
