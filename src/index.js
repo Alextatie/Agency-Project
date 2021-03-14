@@ -4,6 +4,7 @@ const app = express()
 
 app.get('/', (req, res) => {
     res.sendfile("./src/Index.HTML");
+    res.sendfile("./src/css/main.css");
 });
 
 app.listen(app_port)
