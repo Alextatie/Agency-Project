@@ -25,25 +25,12 @@
   "dependencies": {
     "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.1",
+    "body-parser": "^1.19.0",
     "chai": "^4.3.4",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "express-validator": "^6.10.0",
-    "mocha": "^8.3.2",
-    "mysql": "^2.18.1"
-=======
-=======
->>>>>>> parent of 0a37ceb (valid)
-=======
->>>>>>> parent of 0a37ceb (valid)
-=======
->>>>>>> parent of 0a37ceb (valid)
     "mocha": "^8.3.2"
->>>>>>> parent of 0a37ceb (valid)
   },
   "devDependencies": {
     "eslint": "^7.22.0",
