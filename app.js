@@ -2,9 +2,12 @@
 const express  = require('express')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const bodyParser = require('body-parser')
 const msql = require('mysql')
 const {check,validationResult}=require('express-validator')
+=======
+>>>>>>> parent of 0a37ceb (valid)
 =======
 >>>>>>> parent of 0a37ceb (valid)
 =======
@@ -23,6 +26,7 @@ app.use('/bg-1',express.static(__dirname+'public/img'))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const urlencodedParser = bodyParser.urlencoded({extended: false})
@@ -57,6 +61,9 @@ app.get('',(req,res)=>{
 
 
 //navigation
+=======
+//get
+>>>>>>> parent of 0a37ceb (valid)
 =======
 //get
 >>>>>>> parent of 0a37ceb (valid)
