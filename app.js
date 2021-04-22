@@ -1,8 +1,11 @@
 //iomports
 const express  = require('express')
+<<<<<<< HEAD
 const bodyParser = require('body-parser')
 const msql = require('mysql')
 const {check,validationResult}=require('express-validator')
+=======
+>>>>>>> parent of 0a37ceb (valid)
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -17,6 +20,7 @@ app.use('/bg-1',express.static(__dirname+'public/img'))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
+<<<<<<< HEAD
 const urlencodedParser = bodyParser.urlencoded({extended: false})
 
 //mysql
@@ -49,6 +53,9 @@ app.get('',(req,res)=>{
 
 
 //navigation
+=======
+//get
+>>>>>>> parent of 0a37ceb (valid)
 app.get('',(req,res)=>{
   res.render('index')
 })
@@ -71,24 +78,6 @@ app.get('/login',(req,res)=>{
 
 app.get('/signup',(req,res)=>{
   res.render('signup')
-})
-
-app.post('/signup',urlencodedParser,[
-  check('username','Username must be 3+ characters long')
-    .exists()
-    .isLength({min: 3}),
-  check('email','Email is not valid')
-    .isEmail()
-    .normalizeEmail()
-],(req,res)=>{
-  const errors = validationResult(req)
-
-  if(!errors.isEmpty()){
-    const alert = errors.array()
-    res.render('signup', {
-      alert
-    })
-  }
 })
 
 
