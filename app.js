@@ -5,40 +5,18 @@ const {check,validationResult}=require('express-validator')
 const app = express()
 const port = process.env.PORT || 3000
 
-//static files
-app.use(express.static('public'))
-app.use('/main',express.static(__dirname+'public/css'))
-app.use('/js',express.static(__dirname+'public/js'))
-app.use('/bg-1',express.static(__dirname+'public/img'))
-
-//set views
+@@ -13,7 +15,9 @@ app.use('/bg-1',express.static(__dirname+'public/img'))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
+//get
 const urlencodedParser = bodyParser.urlencoded({extended: false})
 
 //navigation
 app.get('',(req,res)=>{
   res.render('index')
 })
-
-app.get('/about',(req,res)=>{
-  res.render('about')
-})
-
-app.get('/contact',(req,res)=>{
-  res.render('contact')
-})
-
-app.get('/deals',(req,res)=>{
-  res.render('deals')
-})
-
-app.get('/login',(req,res)=>{
-  res.render('login')
-})
-
-app.get('/signup',(req,res)=>{
+@@ -38,6 +42,24 @@ app.get('/signup',(req,res)=>{
   res.render('signup')
 })
 
