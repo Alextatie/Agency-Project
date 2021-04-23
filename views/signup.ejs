@@ -15,8 +15,6 @@
       <li><a href="login">Login</a></li>
     </ul>
     <h1>Sign up:</h1>
-    <br><form action="auth" method="POST">
-        <input type="text" name="username" placeholder="Username" required>
     <% if(typeof alert != 'undefined') { %>
     <% alert.forEach(function(error) { %>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -31,7 +29,6 @@
         <input type='emailasf' name='email' placeholder='Email Address' required>
         <br><br><input type="text" name="username" placeholder="Username" required>
         <br><br><input type="password" name="pswd" placeholder="Password" required>
-        <br><br><input type='email' name='email' placeholder='Email Address' required>
         <br><br><input type="password" name="pswdr" placeholder="Repeat Password" required>
         <br><br><input type="submit">
     </form>
