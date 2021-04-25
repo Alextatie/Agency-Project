@@ -63,7 +63,7 @@ app.post("/signup",(req,res)=>{
   const newUser =  new userDB({
       userEmail: req.body.email,
       userName: req.body.username,
-      userPassword:req.body.pswd
+      userPassword:req.body.password
     })
       req.body.password,function(err,user){
         if(err){
