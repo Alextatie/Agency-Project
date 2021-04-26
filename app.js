@@ -9,7 +9,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 //Connect to DB username and password needed of MongoDB.
-mongoose.connect("mongodb+srv://ProjTest:1q2w3e4r@travelagency.gvhr2.mongodb.net/travelagency");
+mongoose.connect("mongodb+srv://ProjTest:1q2w3e4r@travelagency.gvhr2.mongodb.net/TravelAgency");
 
 //static files
 app.use(express.static('public'))
