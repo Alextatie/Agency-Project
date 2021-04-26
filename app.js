@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const passport   =  require("passport");
 const {check,validationResult}=require('express-validator');
 const userDB = require('./Models/usersDB')
+const employeeDB = require('./Models/employeesDB')
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -42,9 +43,15 @@ app.get('/deals',(req,res)=>{
 app.get('/login',(req,res)=>{
   res.render('login')
 })
+
+app.get('/emlogin',(req,res)=>{
+  res.render('emlogin')
+})
+
 app.get('/ErrorPage',(req,res)=>{
   res.render('ErrorPage')
 })
+
 app.get('/ProfileTest',(req,res)=>{
   res.render('ProfileTest')
 })
@@ -53,6 +60,12 @@ app.get('/signup',(req,res)=>{
   res.render('signup')
 })
 
+app.get('/emsignup',(req,res)=>{
+  res.render('emsignup')
+})
+
+
+//user signup scrpit
 app.post("/signup",(req,res)=>{
   function validateEmailAccessibility(email){
 
@@ -77,6 +90,33 @@ app.post("/signup",(req,res)=>{
     newUser.save()
     res.render("ProfileTest");
 })
+
+//employee signup scrpit
+app.post("/emsignup",(req,res)=>{
+  function validateEmailAccessibility(email){
+
+   return Employee.findOne({email: email}).then(function(result){
+        return result !== null;
+   });
+}
+  const newEmployee =  new employeeDB({
+      employeeEmail: req.body.email,
+      employeeName: req.body.username,
+      employeePassword:req.body.password
+    })
+      req.body.password,function(err,user){
+        if(err){
+            console.log(err);
+            res.render("ErrorPage");
+        }
+    passport.authenticate("local")(req,res,function(){
+        res.redirect("ProfileTest");
+    })
+    }
+    newEmployee.save()
+    res.render("ProfileTest");
+})
+
 function isLoggedIn(req,res,next) {
     if(req.isAuthenticated()){
         return next();
