@@ -52,8 +52,8 @@ app.get('/ErrorPage',(req,res)=>{
   res.render('ErrorPage')
 })
 
-app.get('/ProfileTest',(req,res)=>{
-  res.render('ProfileTest')
+app.get('/SuccessPage',(req,res)=>{
+  res.render('SuccessPage')
 })
 
 app.get('/signup',(req,res)=>{
@@ -84,11 +84,11 @@ app.post("/signup",(req,res)=>{
             res.render("ErrorPage");
         }
     passport.authenticate("local")(req,res,function(){
-        res.redirect("ProfileTest");
+        res.redirect("SuccessPage");
     })
     }
     newUser.save()
-    res.render("ProfileTest");
+    res.render("SuccessPage");
 })
 
 //employee signup scrpit
@@ -110,11 +110,11 @@ app.post("/emsignup",(req,res)=>{
             res.render("ErrorPage");
         }
     passport.authenticate("local")(req,res,function(){
-        res.redirect("ProfileTest");
+        res.redirect("SuccessPage");
     })
     }
     newEmployee.save()
-    res.render("ProfileTest");
+    res.render("SuccessPage");
 })
 
 function isLoggedIn(req,res,next) {
