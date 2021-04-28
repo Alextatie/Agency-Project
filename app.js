@@ -5,8 +5,9 @@ const bodyParser = require('body-parser');
 const passport   =  require("passport");
 const {check,validationResult}=require('express-validator');
 const userDB = require('./Models/usersDB')
-const { validateEmail } = require('./Routes/Verifier.js')
+const { validateEmail,validatePassword} = require('./Routes/Verifier.js')
 const signupTemplet = require('./views/signUp.js')
+const loginTemplet = require('./views/logIn.js')
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -79,12 +80,13 @@ app.post('/signup',[validateEmail],async (req, res) => {
     )
 
 //login
-app.post('/login',async function (req,res){
+app.post('/login',[validatePassword],async (req,res)=>{
   userName=req.body.email;
   userPassword=req.body.password;
-  const logged = await userDB.findOne({"userEmail":userName})
-  if(logged==null){throw new Error("No Such Account Exist.");}
-  if(logged["userPassword"]!=userPassword){throw new Error("Incorrect Password.");}
+  const errors = validationResult(req)
+  console.log(errors);
+  if (!errors.isEmpty()) {
+      return res.send(loginTemplet({ errors }))}
   else{res.render('ProfileTest');}
 })
 
