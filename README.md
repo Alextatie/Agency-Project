@@ -19,6 +19,7 @@ This website built as part of Software Project Management course in Sami-Shamoon
 * Install NodeJs & run server: npm run dev
 * Install CI/CD tool & Init - CircleCI
 * npm (JavaScript packages) init: npm init , npm install
+* Oue DB-> mongoDB: https://cloud.mongodb.com/v2/6081cf4b01ea736a296479e3#clusters
 * Our web host -> heroku: https://dashboard.heroku.com/apps/sce-agency-project
 * Visit our website:https://sce-agency-project.herokuapp.com/
 * Our Clubhouse -> https://app.clubhouse.io/travelagency2021/stories/space/9/everything
