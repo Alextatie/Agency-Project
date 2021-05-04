@@ -20,7 +20,6 @@ This website built as part of Software Project Management course in Sami-Shamoon
 * Install CI/CD tool & Init - CircleCI
 * npm (JavaScript packages) init: npm init , npm install
 * Our web host -> heroku: https://dashboard.heroku.com/apps/sce-agency-project
-* Our DB ->
 * Visit our website:https://sce-agency-project.herokuapp.com/
 * Our Clubhouse -> https://app.clubhouse.io/travelagency2021/stories/space/9/everything
 
