@@ -14,6 +14,9 @@ body {
  background-repeat: no-repeat;
  background-size: cover;
  text-align: center;
+ background-attachment: fixed;
+ 
+ 
 }
 
 #header h1{
@@ -63,4 +66,38 @@ input[type="submit"]{
   width: 70px;
   color: black;
   text-shadow: none;
+}
+.container {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.section-head{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.heading{
+  display: block;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,3fr));
+  grid-gap: 2.5rem;
+}
+.grid-item{
+  display:grid;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.Featured-deals{
+  height: 15rem;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+Deal-image{
+  display: grid;
 }
